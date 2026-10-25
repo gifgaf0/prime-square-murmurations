@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Rebuild and check everything: the Lean formalization and the numerical checks.
 #
-#   ./check.sh            Lean build + axiom audit + every numerical check (about 1 hour after Mathlib is in place)
+#   ./check.sh            Lean build + axiom audit + every numerical check (about 30 min of numerics on 2 cores)
 #   ./check.sh --quick    the same, skipping the three slow end-to-end runs (thmA_numeric, a_minus_pred, arith_s4)
 #   ./check.sh --lean     Lean only
 #   ./check.sh --python   numerical checks only (add --quick to skip the slow ones)
@@ -19,7 +19,7 @@ for arg in "$@"; do
     --lean)   DO_PY=0 ;;
     --python) DO_LEAN=0 ;;
     --quick)  QUICK="--quick" ;;
-    -h|--help) sed -n '2,11p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,9p' "$0"; exit 0 ;;
     *) echo "unknown option: $arg" >&2; exit 2 ;;
   esac
 done
