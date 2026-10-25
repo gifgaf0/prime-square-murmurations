@@ -1,0 +1,19 @@
+C2 = prod_l E_l(0) = 0.7188034483
+prime average over 406 primes in [20000, 24000] (weights log p):
+  t=  0: average L(1, t^2-4p^2) = 0.78543   f_2(t) = 0.78540   ratio 1.0000
+  t=  1: average L(1, t^2-4p^2) = 0.71770   f_2(t) = 0.71880   ratio 0.9985
+  t=  2: average L(1, t^2-4p^2) = 1.80483   f_2(t) = 1.79701   ratio 1.0043
+  t=  3: average L(1, t^2-4p^2) = 0.48400   f_2(t) = 0.47920   ratio 1.0100
+  t=  4: average L(1, t^2-4p^2) = 1.08149   f_2(t) = 1.07821   ratio 1.0030
+  t=  5: average L(1, t^2-4p^2) = 0.95263   f_2(t) = 0.95840   ratio 0.9940
+  t=  6: average L(1, t^2-4p^2) = 1.18488   f_2(t) = 1.19801   ratio 0.9890
+  t=  7: average L(1, t^2-4p^2) = 0.61713   f_2(t) = 0.61612   ratio 1.0016
+  t=  8: average L(1, t^2-4p^2) = 1.08267   f_2(t) = 1.07821   ratio 1.0041
+  t=  9: average L(1, t^2-4p^2) = 0.48184   f_2(t) = 0.47920   ratio 1.0055
+  t= 10: average L(1, t^2-4p^2) = 2.39195   f_2(t) = 2.39601   ratio 0.9983
+  t= 11: average L(1, t^2-4p^2) = 0.65416   f_2(t) = 0.65346   ratio 1.0011
+  t= 12: average L(1, t^2-4p^2) = 0.71437   f_2(t) = 0.71880   ratio 0.9938
+  t= 15: average L(1, t^2-4p^2) = 0.64538   f_2(t) = 0.63894   ratio 1.0101
+  t= 20: average L(1, t^2-4p^2) = 1.44044   f_2(t) = 1.43761   ratio 1.0020
+  t= 30: average L(1, t^2-4p^2) = 1.59181   f_2(t) = 1.59734   ratio 0.9965
+  t= 60: average L(1, t^2-4p^2) = 0.96281   f_2(t) = 0.95840   ratio 1.0046

@@ -1,0 +1,9 @@
+PARI stack size set to 2147483648 bytes, maximum size set to 2147483648
+PARI stack size set to 2147483648 bytes, maximum size set to 2147483648
+H0^ table ready (6.7s): H0^(0) = 0.4439938162, H0^(50) = -6.662e-05, H0^(200) = -2.466e-08
+limit (Theorem A) = -1.707745  (10s)
+K=   10000 sigma=     3981 primes=   34 (class numbers 8141):  M = -0.349606   A = -0.349239   M-A = -3.67e-04 +- 2.7e-02 (z = -0.01)   Pred = -0.351294   A-Pred = +2.05e-03   limit -1.707745   (17s)
+K=   30000 sigma=    10701 primes=   89 (class numbers 23628):  M = -0.364629   A = -0.342397   M-A = -2.22e-02 +- 1.9e-02 (z = -1.18)   Pred = -0.348028   A-Pred = +5.63e-03   limit -1.707745   (33s)
+K=  100000 sigma=    31623 primes=  261 (class numbers 78978):  M = -0.335044   A = -0.331714   M-A = -3.33e-03 +- 1.3e-02 (z = -0.25)   Pred = -0.335188   A-Pred = +3.47e-03   limit -1.707745   (93s)
+K=  300000 sigma=    84998 primes=  709 (class numbers 239367):  M = -0.330144   A = -0.333280   M-A = +3.14e-03 +- 7.9e-03 (z = +0.39)   Pred = -0.332944   A-Pred = -3.35e-04   limit -1.707745   (317s)
+K= 1000000 sigma=   251189 primes=  717 (class numbers 272888):  M = -0.362797   A = -0.371898   M-A = +9.10e-03 +- 8.1e-03 (z = +1.13)   Pred = -0.371275   A-Pred = -6.23e-04   limit -1.707745   (678s)

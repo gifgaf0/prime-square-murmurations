@@ -1,0 +1,13 @@
+(1) window identity
+   max |direct - closed| over 41 angles = 5.17e-12   (direct sums are up to ~217)
+   extra terms: sum h(k) i^k (k-1) = 5.00e-12,  sum h(k) i^k = 3.36e-15;  sum h(k) dim S_k = 34482.5976 vs sigma H0^(0)(K-7)/24 = 34482.5976
+(2) Zagier L-function
+   local factors: 796 (D, l) pairs, mismatches: 0
+   H(|D|) = sqrt|D|/pi L(1,chi_D0) B_f(1): max relative deviation 3.1e-16
+(3) per-prime identity, K = 2000, smooth window H0 with sigma = K^0.9
+   p=467: y=8.618  V exact = -0.40713733   V from the L-value formula = -0.40713733   diff -1.6e-14
+   p=479: y=9.067  V exact = -0.43715695   V from the L-value formula = -0.43715695   diff +4.9e-14
+   p=487: y=9.372  V exact = -0.62920075   V from the L-value formula = -0.62920075   diff +6.0e-14
+   p=499: y=9.840  V exact = -0.30392373   V from the L-value formula = -0.30392373   diff +1.6e-13
+   p=1801: y=128.180  V exact = +0.59824779   V from the L-value formula = +0.59824779   diff -1.9e-13
+   p=2003: y=158.546  V exact = +0.13114278   V from the L-value formula = +0.13114278   diff -3.6e-14

@@ -1,0 +1,32 @@
+# Numerical checks run by scripts/run_checks.py.
+# Columns (tab-separated): name, working dir (relative to proof/), command, reference log (relative to proof/, or "-"), tier,
+# and optionally known differences "NEW=>REF" (comma-separated): printed values that legitimately differ from the committed log.
+# tier "quick" = minutes; "long" = the slow end-to-end runs (skipped by `./check.sh --quick`).
+# Each command runs in a scratch copy of proof/ under build/, so the committed logs are never overwritten.
+exact_checks	.	python3 exact_checks.py	exact_checks.log	quick
+local	.	python3 local.py	local.log	quick
+local_k_1	.	python3 local_k.py 1	-	quick
+local_k_2	.	python3 local_k.py 2	-	quick
+f2	.	python3 f2.py 20000 24000	f2.log	quick
+thmB	.	python3 thmB.py	thmB.log	quick
+limit_tm	.	python3 limit_tm.py	limit_tm.log	quick
+pred_kappa	.	python3 pred_kappa.py	pred_kappa.log	quick
+thmA_numeric	.	python3 thmA_numeric.py	thmA_numeric.log	long	-1.707779=>-1.707745
+a_minus_pred	.	python3 a_minus_pred.py	-	long
+arith_s1	review_arith	python3 s1_local_densities.py	-	quick
+arith_s2	review_arith	python3 s2_kloosterman.py	-	quick
+arith_s3	review_arith	python3 s3_local_identity.py	review_arith/s3.log	quick
+arith_s4	review_arith	python3 s4_prime_average.py 10000 200000 0,1,2,3,4,5,6,7,8,12,15,30,105	review_arith/s4.log	long
+arith_s5_A	review_arith	python3 s5_theoremB.py A 1e7	review_arith/s5_A.log	quick
+arith_s5_B	review_arith	python3 s5_theoremB.py B 1e7	review_arith/s5_B.log	quick
+arith_s6	review_arith	python3 s6_intervals.py 2e6 20000	review_arith/s6.log	quick
+arith_s7	review_arith	python3 s7_shapes.py	-	quick
+analysis_exponents	review_analysis	python3 chk_exponents.py	-	quick
+analysis_lemma1	review_analysis	python3 chk_lemma1.py	-	quick
+analysis_lemma2	review_analysis	python3 chk_lemma2.py	-	quick
+analysis_lemma2b	review_analysis	python3 chk_lemma2b.py	-	quick
+analysis_lemma3	review_analysis	python3 chk_lemma3.py	-	quick
+analysis_lemma4	review_analysis	python3 chk_lemma4_lim.py	-	quick
+analysis_lemma6	review_analysis	python3 chk_lemma6.py	-	quick
+analysis_lemma7	review_analysis	python3 chk_lemma7.py	-	quick
+analysis_prop1	review_analysis	python3 chk_prop1.py	-	quick

@@ -1,0 +1,10 @@
+E=[0.2,0.3]: nu2 c-ordered C=1e4,1e5,2e+06: +0.69994 +0.69987 +0.69984 (companion +0.700) | nu1 +0.83037 (companion None) | prime-like for squares +0.82615
+E=[0.85,1.15]: nu2 c-ordered C=1e4,1e5,2e+06: +1.98021 +1.98014 +1.98011 (companion +1.980) | nu1 +2.04483 (companion 2.045) | prime-like for squares +2.03918
+E=[1.6,1.95]: nu2 c-ordered C=1e4,1e5,2e+06: -0.77919 -0.77926 -0.77929 (companion -0.779) | nu1 +0.02669 (companion 0.027) | prime-like for squares +0.02679
+E=[2.0,2.5]: nu2 c-ordered C=1e4,1e5,2e+06: -0.50967 -0.50974 -0.50977 (companion -0.510) | nu1 +0.29264 (companion 0.293) | prime-like for squares +0.29252
+    m-ordered (companion's ordering): M=100: -0.50792  M=1000: -0.50931  M=5000: -0.50957  M=10000: -0.50967  M=20000: -0.50979
+E=[3.5,4.5]: nu2 c-ordered C=1e4,1e5,2e+06: +1.58267 +1.58260 +1.58257 (companion +1.583) | nu1 +1.63588 (companion 1.636) | prime-like for squares +1.63287
+E=[5.5,7.0]: nu2 c-ordered C=1e4,1e5,2e+06: +0.62252 +0.62245 +0.62242 (companion +0.622) | nu1 +0.08457 (companion 0.085) | prime-like for squares +0.08435
+E=[8.0,10.0]: nu2 c-ordered C=1e4,1e5,2e+06: -1.06245 -1.06251 -1.06254 (companion -1.063) | nu1 +0.52608 (companion 0.526) | prime-like for squares +0.52531
+    m-ordered (companion's ordering): M=100: -1.06125  M=1000: -1.06220  M=5000: -1.06245  M=10000: -1.06257  M=20000: -1.06254
+[70s]

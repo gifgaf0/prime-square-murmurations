@@ -1,0 +1,20 @@
+bump on [0.6000000000000001,1.5]: I(0) = 0.197207703855 (direct y-integral 0.197207703855); I1(0) = 0.199797217276; max|I_fft - I_quad| at t=0,1,7,40: 1.7e-16
+  tail: max|I(t)| for t in [T/2,T] = 4.1e-18; C_odd = 1.078205172404, Artin = 0.3739558158
+  LHS squares (t-series) = 1.1039898208    LHS primes (t-series) = 1.1452114991   [0s]
+  F(n) - n*int(psi) for n in [N0/2,N0]: squares 4.5e-13, primes 4.5e-13
+  RHS, c-ordered partial sums (squares: raw, and with the explicit t=0 piece P_C(0) replaced by pi/4):
+    C=      100: squares S_C = +1.1095843977  corrected = +1.1044287291   |  primes S_C = +1.1430361121
+    C=     1000: squares S_C = +1.1042497292  corrected = +1.1040051069   |  primes S_C = +1.1449971928
+    C=    10000: squares S_C = +1.1040908292  corrected = +1.1039894783   |  primes S_C = +1.1451900936
+    C=   100000: squares S_C = +1.1040219839  corrected = +1.1039898084   |  primes S_C = +1.1452093541
+    C=  1000000: squares S_C = +1.1039861505  corrected = +1.1039898210   |  primes S_C = +1.1452112812
+    C= 10000000: squares S_C = +1.1039912760  corrected = +1.1039898208   |  primes S_C = +1.1452114739
+  sum_c |c-block| up to C (squares) = 3.963 (grows ~log C: up to C/10: 3.509)
+  prime-like prediction for squares (T_1 masses, y^-1/2 density): +1.1604130872
+    m-ordered, M=    10: squares +1.1035916514   primes +1.1235381829
+    m-ordered, M=   100: squares +1.1092549968   primes +1.1431002008
+    m-ordered, M=  1000: squares +1.1042120014   primes +1.1449998997
+    m-ordered, M=  3000: squares +1.1043811752   primes +1.1451410664
+    m-ordered, M= 10000: squares +1.1040512961   primes +1.1451903673
+    m-ordered, M= 20000: squares +1.1040954812   primes +1.1452009295
+  done [61s]
