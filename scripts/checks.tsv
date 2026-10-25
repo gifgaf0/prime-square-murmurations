@@ -11,7 +11,7 @@ f2	.	python3 f2.py 20000 24000	f2.log	quick
 thmB	.	python3 thmB.py	thmB.log	quick
 limit_tm	.	python3 limit_tm.py	limit_tm.log	quick
 pred_kappa	.	python3 pred_kappa.py	pred_kappa.log	quick
-thmA_numeric	.	python3 thmA_numeric.py	thmA_numeric.log	long	-1.707779=>-1.707745
+thmA_numeric	.	python3 thmA_numeric.py	thmA_numeric.log	long
 a_minus_pred	.	python3 a_minus_pred.py	-	long
 arith_s1	review_arith	python3 s1_local_densities.py	-	quick
 arith_s2	review_arith	python3 s2_kloosterman.py	-	quick

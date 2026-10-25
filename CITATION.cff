@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or the Lean formalization, please cite the paper and this repository."
+title: "prime-square-murmurations: code, logs and Lean formalization"
+type: software
+authors:
+  - family-names: Gifford
+    given-names: Matthew
+license: Apache-2.0
+repository-code: "https://github.com/gifgaf0/prime-square-murmurations"
+keywords:
+  - murmurations
+  - modular forms
+  - Kloosterman sums
+  - Lean 4
+  - Mathlib
+preferred-citation:
+  type: article
+  title: "Murmurations of Hecke eigenvalues at prime squares in the weight aspect"
+  authors:
+    - family-names: Gifford
+      given-names: Matthew
+  year: 2026
+  month: 10
