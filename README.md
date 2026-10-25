@@ -52,9 +52,9 @@ The slow runs are `thmA_numeric`, `a_minus_pred` and `arith_s4`.
 |---|---|
 | File | `lean/PrimeSquareMurmurations/LocalDensities.lean` (3,407 lines) |
 | Lean | `leanprover/lean4:v4.36.0-rc1` (`lean/lean-toolchain`) |
-| Mathlib | commit [`4dc43842a11f257ffba2a611c943a133a65cb4b2`](https://github.com/leanprover-community/mathlib4/commit/4dc43842a11f257ffba2a611c943a133a65cb4b2) (master, 23 October 2026), pinned in `lean/lakefile.toml` and `lean/lake-manifest.json` |
+| Mathlib | commit [`64fa0ec729a582e831181e61b95941f69a967587`](https://github.com/leanprover-community/mathlib4/commit/64fa0ec729a582e831181e61b95941f69a967587) (master, 23 October 2026, 15:44 UTC), pinned in `lean/lakefile.toml` and `lean/lake-manifest.json` |
 
-The paper says the file was checked against "Mathlib of 23 October 2026". The lockfile from that original check was not kept. The pin above is the last Mathlib master commit dated 23 October 2026 (UTC). Every master commit that day uses `v4.36.0-rc1`. `./check.sh` was run against this pin on 24 October 2026: the file compiles, and the axiom audit below passes. Lake prints warnings that the file is not in Lean's new `module` system. These are expected for a single-file project and do not affect the check.
+This is the Mathlib commit the file was originally checked against, as cited in Section 9 of the paper. `./check.sh` was rerun against this pin on 24 October 2026: the file compiles, and the axiom audit below passes. Lake prints warnings that the file is not in Lean's new `module` system. These are expected for a single-file project and do not affect the check.
 
 The file contains no `sorry`, `admit` or `native_decide`. `scripts/check_lean_output.py` confirms this. It also confirms that all 26 `#print axioms` reports at the end of the file list only `propext`, `Classical.choice` and `Quot.sound`.
 
@@ -106,11 +106,11 @@ PARI/GP (through `cypari`) supplies traces, class numbers and L-values. The loca
 | `review_arith/s1`–`s7` | independent recheck of Lemmas 6, 8 and Theorem B (own code) | §10 "recheck" |
 | `review_analysis/chk_*.py` | independent recheck of Lemmas 1–4, 6, 7, Prop. 1 and the error exponents (own code) | §10 "recheck" |
 
-**One documented difference from a committed log.** In `thmA_numeric.log` the printed limit is −1.707745, but a rerun prints −1.707779.
-- The log was written when `limit()` summed the t-series to |t| ≤ 600. The script now sums to |t| ≤ 3000.
-- `limit_tm.log` shows both values: −1.7077455 at t ≤ 600 and −1.7077790 at t ≤ 3000. The paper uses −1.7077790.
-- Every M(K), A(K) and main-term value in the log reproduces exactly.
-- The log is kept as it was. `checks.tsv` declares this one substitution, and the runner reports it each time.
+**`thmA_numeric.log` was regenerated on 24 October 2026.** The original log printed the limit as −1.707745.
+- That value came from an older default that summed the t-series only to |t| ≤ 600. The script now sums to |t| ≤ 3000 and prints −1.707779, the value used in the paper.
+- `limit_tm.log` shows both values: −1.7077455 at t ≤ 600 and −1.7077790 at t ≤ 3000.
+- In the rerun, every M(K), A(K) and main-term value matched the old log exactly; only the limit column changed.
+- The original log is in the git history (commit `0fd3695`).
 
 **The review scripts test the drafts they were given.** The reviews found errors that were then corrected in the paper, so a few of these scripts still print the discrepancies they found. For example, `chk_lemma3.py` (b) flags the r = 1 Hensel count, which the paper now states correctly. `chk_lemma2.py` also tests small θ on purpose, outside the range of the theorem. These scripts have no committed logs. The runner only requires that they run; their output in `build/logs/` is meant to be read.
 
@@ -138,6 +138,12 @@ scripts/
   run_checks.py             runs them and compares with the logs
   check_lean_output.py      axiom / sorry audit of the Lean output
 ```
+
+## License and citation
+
+The code and the Lean files are released under the Apache License 2.0 (`LICENSE`), the license Mathlib uses. Copyright 2026 Matthew Gifford.
+
+To cite this work, cite the paper. Citation metadata for the repository is in `CITATION.cff`.
 
 ## Use of AI tools
 

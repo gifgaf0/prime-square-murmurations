@@ -4,7 +4,7 @@ defaultTargets = ["PrimeSquareMurmurations"]
 [[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4"
-rev = "4dc43842a11f257ffba2a611c943a133a65cb4b2"
+rev = "64fa0ec729a582e831181e61b95941f69a967587"
 
 [[lean_lib]]
 name = "PrimeSquareMurmurations"
