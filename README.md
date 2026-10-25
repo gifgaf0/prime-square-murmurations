@@ -4,7 +4,7 @@
 
 Code, logs and Lean formalization for
 
-> Matthew Gifford, *Murmurations of Hecke eigenvalues at prime squares in the weight aspect* (October 2026).
+> Matthew Gifford, *Murmurations of Hecke eigenvalues at prime squares in the weight aspect* (October 2026), [doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327).
 
 The paper proves two results about the root-number-weighted average of λ_f(p²) over level-one eigenforms:
 
@@ -145,7 +145,7 @@ scripts/
 
 The code and the Lean files are released under the Apache License 2.0 (`LICENSE`), the license Mathlib uses. Copyright 2026 Matthew Gifford.
 
-To cite this work, cite the paper. Release v1.0.0 of this repository is archived on Zenodo as [doi:10.5281/zenodo.23631454](https://doi.org/10.5281/zenodo.23631454). Citation metadata is in `CITATION.cff`.
+To cite this work, cite the paper ([doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327)). Release v1.0.0 of this repository is archived on Zenodo as [doi:10.5281/zenodo.23631454](https://doi.org/10.5281/zenodo.23631454). Citation metadata is in `CITATION.cff`.
 
 ## Use of AI tools
 

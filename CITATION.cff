@@ -18,6 +18,8 @@ keywords:
   - Mathlib
 preferred-citation:
   type: article
+  doi: "10.5281/zenodo.23632327"
+  url: "https://doi.org/10.5281/zenodo.23632327"
   title: "Murmurations of Hecke eigenvalues at prime squares in the weight aspect"
   authors:
     - family-names: Gifford
