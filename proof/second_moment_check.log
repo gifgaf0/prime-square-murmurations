@@ -1,0 +1,6 @@
+(1) odd prime powers checked
+(2) powers of 2 checked
+(2') sharper 2-adic bound (j>=3) and W(2)=1, W(4)=8 for 2||t checked
+(3) multiplicativity checked
+(4) composite n checked; max S2/(phi(n) tau(n)^2) over n>=2 = 0.4444 at n=4, t=2
+ALL OK

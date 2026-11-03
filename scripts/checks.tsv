@@ -30,3 +30,6 @@ analysis_lemma4	review_analysis	python3 chk_lemma4_lim.py	-	quick
 analysis_lemma6	review_analysis	python3 chk_lemma6.py	-	quick
 analysis_lemma7	review_analysis	python3 chk_lemma7.py	-	quick
 analysis_prop1	review_analysis	python3 chk_prop1.py	-	quick
+second_moment	.	python3 second_moment_check.py	second_moment_check.log	quick
+second_moment_recheck	review_second_moment	python3 second_moment_recheck.py 400 160	review_second_moment/second_moment_recheck.log	quick
+jacobi_probe	review_second_moment	python3 jacobi_probe.py	review_second_moment/jacobi_probe.log	quick
