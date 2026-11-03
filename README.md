@@ -4,7 +4,7 @@
 
 Code, logs and Lean formalization for
 
-> Matthew Gifford, *Murmurations of Hecke eigenvalues at prime squares in the weight aspect* (v10, November 2026), [doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327).
+> Matthew Gifford, *Murmurations of Hecke eigenvalues at prime squares in the weight aspect* (v10, November 2026), [doi:10.5281/zenodo.23632326](https://doi.org/10.5281/zenodo.23632326) (all versions; v10 is [doi:10.5281/zenodo.23932824](https://doi.org/10.5281/zenodo.23932824)).
 
 Version 10 of the paper widens the range of Theorem A from θ > 7/8 to θ > 5/6 by expanding the coefficients a_{t²−4p²}(n) in Dirichlet characters; the arithmetic input is a second-moment bound (Lemma 7 of v10). The check, its independent recheck and the review notes are in `proof/second_moment_check.py` and `proof/review_second_moment/` (see below). The Lean part is unchanged.
 
@@ -153,7 +153,7 @@ scripts/
 
 The code and the Lean files are released under the Apache License 2.0 (`LICENSE`), the license Mathlib uses. Copyright 2026 Matthew Gifford.
 
-To cite this work, cite the paper ([doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327)). This repository is archived on Zenodo under the concept DOI [doi:10.5281/zenodo.23631453](https://doi.org/10.5281/zenodo.23631453), which always resolves to the latest release; release v1.1.0 is [doi:10.5281/zenodo.23932678](https://doi.org/10.5281/zenodo.23932678) and v1.0.0 is [doi:10.5281/zenodo.23631454](https://doi.org/10.5281/zenodo.23631454). Citation metadata is in `CITATION.cff`.
+To cite this work, cite the paper ([doi:10.5281/zenodo.23632326](https://doi.org/10.5281/zenodo.23632326), the concept DOI, which resolves to the latest version; v10 is [doi:10.5281/zenodo.23932824](https://doi.org/10.5281/zenodo.23932824) and v9 is [doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327)). This repository is archived on Zenodo under the concept DOI [doi:10.5281/zenodo.23631453](https://doi.org/10.5281/zenodo.23631453), which always resolves to the latest release; release v1.1.0 is [doi:10.5281/zenodo.23932678](https://doi.org/10.5281/zenodo.23932678) and v1.0.0 is [doi:10.5281/zenodo.23631454](https://doi.org/10.5281/zenodo.23631454). Citation metadata is in `CITATION.cff`.
 
 ## Use of AI tools
 
