@@ -1,6 +1,6 @@
 # Prime-square murmurations in the weight aspect
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23631454.svg)](https://doi.org/10.5281/zenodo.23631454)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23631453.svg)](https://doi.org/10.5281/zenodo.23631453)
 
 Code, logs and Lean formalization for
 
@@ -153,7 +153,7 @@ scripts/
 
 The code and the Lean files are released under the Apache License 2.0 (`LICENSE`), the license Mathlib uses. Copyright 2026 Matthew Gifford.
 
-To cite this work, cite the paper ([doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327)). Release v1.0.0 of this repository is archived on Zenodo as [doi:10.5281/zenodo.23631454](https://doi.org/10.5281/zenodo.23631454). Citation metadata is in `CITATION.cff`.
+To cite this work, cite the paper ([doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327)). This repository is archived on Zenodo under the concept DOI [doi:10.5281/zenodo.23631453](https://doi.org/10.5281/zenodo.23631453), which always resolves to the latest release; release v1.1.0 is [doi:10.5281/zenodo.23932678](https://doi.org/10.5281/zenodo.23932678) and v1.0.0 is [doi:10.5281/zenodo.23631454](https://doi.org/10.5281/zenodo.23631454). Citation metadata is in `CITATION.cff`.
 
 ## Use of AI tools
 
