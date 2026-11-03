@@ -1,0 +1,24 @@
+p= 11: max_t sum|a^| / sqrt p = 0.459   lower bound (p-3)/(2p) = 0.364
+p= 13: max_t sum|a^| / sqrt p = 0.555   lower bound (p-3)/(2p) = 0.385
+p= 17: max_t sum|a^| / sqrt p = 0.586   lower bound (p-3)/(2p) = 0.412
+p= 19: max_t sum|a^| / sqrt p = 0.578   lower bound (p-3)/(2p) = 0.421
+p= 23: max_t sum|a^| / sqrt p = 0.538   lower bound (p-3)/(2p) = 0.435
+p= 29: max_t sum|a^| / sqrt p = 0.594   lower bound (p-3)/(2p) = 0.448
+p= 31: max_t sum|a^| / sqrt p = 0.553   lower bound (p-3)/(2p) = 0.452
+p= 37: max_t sum|a^| / sqrt p = 0.588   lower bound (p-3)/(2p) = 0.459
+p= 41: max_t sum|a^| / sqrt p = 0.613   lower bound (p-3)/(2p) = 0.463
+p= 43: max_t sum|a^| / sqrt p = 0.604   lower bound (p-3)/(2p) = 0.465
+p= 47: max_t sum|a^| / sqrt p = 0.635   lower bound (p-3)/(2p) = 0.468
+p= 53: max_t sum|a^| / sqrt p = 0.608   lower bound (p-3)/(2p) = 0.472
+p= 59: max_t sum|a^| / sqrt p = 0.584   lower bound (p-3)/(2p) = 0.475
+p= 61: max_t sum|a^| / sqrt p = 0.625   lower bound (p-3)/(2p) = 0.475
+p= 67: max_t sum|a^| / sqrt p = 0.612   lower bound (p-3)/(2p) = 0.478
+p= 71: max_t sum|a^| / sqrt p = 0.632   lower bound (p-3)/(2p) = 0.479
+p= 73: max_t sum|a^| / sqrt p = 0.624   lower bound (p-3)/(2p) = 0.479
+p= 79: max_t sum|a^| / sqrt p = 0.606   lower bound (p-3)/(2p) = 0.481
+p= 83: max_t sum|a^| / sqrt p = 0.629   lower bound (p-3)/(2p) = 0.482
+p= 89: max_t sum|a^| / sqrt p = 0.622   lower bound (p-3)/(2p) = 0.483
+p= 97: max_t sum|a^| / sqrt p = 0.619   lower bound (p-3)/(2p) = 0.485
+p=101: max_t sum|a^| / sqrt p = 0.634   lower bound (p-3)/(2p) = 0.485
+p=103: max_t sum|a^| / sqrt p = 0.614   lower bound (p-3)/(2p) = 0.485
+ALL OK

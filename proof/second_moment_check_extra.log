@@ -1,0 +1,25 @@
+(A) sharper 2-adic bound and W(2)=1, W(4)=8 for 2||t: ok
+   j=3: max W(2^j)/phi(2^j) = 4.000   (note's bound 128(j-2) = 128)
+   j=4: max W(2^j)/phi(2^j) = 8.000   (note's bound 128(j-2) = 256)
+   j=5: max W(2^j)/phi(2^j) = 8.000   (note's bound 128(j-2) = 384)
+   j=6: max W(2^j)/phi(2^j) = 16.000   (note's bound 128(j-2) = 512)
+   j=7: max W(2^j)/phi(2^j) = 24.000   (note's bound 128(j-2) = 640)
+   j=8: max W(2^j)/phi(2^j) = 32.000   (note's bound 128(j-2) = 768)
+   j=9: max W(2^j)/phi(2^j) = 40.000   (note's bound 128(j-2) = 896)
+   l=3 j=1: max W/phi (l∤t) = 1.000   bound 4(1+2j l^j/phi) = 16.00
+   l=3 j=2: max W/phi (l∤t) = 3.000   bound 4(1+2j l^j/phi) = 28.00
+   l=3 j=3: max W/phi (l∤t) = 5.000   bound 4(1+2j l^j/phi) = 40.00
+   l=3 j=4: max W/phi (l∤t) = 7.000   bound 4(1+2j l^j/phi) = 52.00
+   l=5 j=1: max W/phi (l∤t) = 0.500   bound 4(1+2j l^j/phi) = 14.00
+   l=5 j=2: max W/phi (l∤t) = 2.500   bound 4(1+2j l^j/phi) = 24.00
+   l=5 j=3: max W/phi (l∤t) = 4.500   bound 4(1+2j l^j/phi) = 34.00
+   l=5 j=4: max W/phi (l∤t) = 6.500   bound 4(1+2j l^j/phi) = 44.00
+   l=7 j=1: max W/phi (l∤t) = 1.667   bound 4(1+2j l^j/phi) = 13.33
+   l=7 j=2: max W/phi (l∤t) = 3.667   bound 4(1+2j l^j/phi) = 22.67
+   l=7 j=3: max W/phi (l∤t) = 5.667   bound 4(1+2j l^j/phi) = 32.00
+   l=7 j=4: max W/phi (l∤t) = 7.667   bound 4(1+2j l^j/phi) = 41.33
+(D) N_q multiplicative with even factor, all D mod 4q: ok
+(E) top S2/(phi tau^2) for n>=2: [(0.444, 4, 26), (0.444, 4, 22), (0.444, 4, 18), (0.444, 4, 14), (0.444, 4, 10), (0.444, 4, 6)]
+    S2(1,t)/(phi(1) tau(1)^2) = 1  <- this is the 1.0 in the log
+ALL EXTRA OK
+
