@@ -4,11 +4,13 @@
 
 Code, logs and Lean formalization for
 
-> Matthew Gifford, *Murmurations of Hecke eigenvalues at prime squares in the weight aspect* (October 2026), [doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327).
+> Matthew Gifford, *Murmurations of Hecke eigenvalues at prime squares in the weight aspect* (v10, November 2026), [doi:10.5281/zenodo.23632327](https://doi.org/10.5281/zenodo.23632327).
+
+Version 10 of the paper widens the range of Theorem A from θ > 7/8 to θ > 5/6 by expanding the coefficients a_{t²−4p²}(n) in Dirichlet characters; the arithmetic input is a second-moment bound (Lemma 7 of v10). The check, its independent recheck and the review notes are in `proof/second_moment_check.py` and `proof/review_second_moment/` (see below). The Lean part is unchanged.
 
 The paper proves two results about the root-number-weighted average of λ_f(p²) over level-one eigenforms:
 
-- **Theorem A** (assuming GRH for Dirichlet L-functions): the average converges to an explicit limit.
+- **Theorem A** (assuming GRH for Dirichlet L-functions, window exponent 5/6 < θ < 1): the average converges to an explicit limit.
 - **Theorem B** (unconditional): that limit equals an ordered sum of point masses at y = (c/m)², weighted by averages of Kloosterman sums S(a², 1; c).
 
 This repository contains:
@@ -64,8 +66,8 @@ The file contains no `sorry`, `admit` or `native_decide`. `scripts/check_lean_ou
 |---|---|
 | `nuSum_odd`, `nuSum_two` | φ(ℓⁱ)ν_t(ℓⁱ) for every prime ℓ (including 2) and every i ≥ 1, from the definition of N_q |
 | `hasSum_E_odd`, `hasSum_E_two` | the Euler factors E_ℓ(t) = Σ_j δ_t(ℓʲ)ℓ⁻ʲ of Lemma 6 |
-| `KS_formula` | Lemma 8(a): Σ_a S(a², 1; c) for every c ≥ 1 and every primitive additive character mod c |
-| `local_identity_odd`, `local_identity_two` | Lemma 8(b) at every prime |
+| `KS_formula` | Lemma 9(a) (Lemma 8(a) in v9): Σ_a S(a², 1; c) for every c ≥ 1 and every primitive additive character mod c |
+| `local_identity_odd`, `local_identity_two` | Lemma 9(b) (v9: 8(b)) at every prime |
 | `global_identity` | for t ≠ 0, Σ_c G(c)c_c(t) converges absolutely and equals Π_p E_p(t) |
 | `Gc_eq` | G(c) = A₂(c)c⁻² Π_{ℓ∣c}(1 − ℓ⁻²)⁻¹, with A₂ defined through Kloosterman sums |
 | `sum_norm_gc_le` | Σ_c \|G(c)c_c(t)\| ≤ 2\|t\|e^{C₀} for t ≠ 0 |
@@ -73,7 +75,7 @@ The file contains no `sorry`, `admit` or `native_decide`. `scripts/check_lean_ou
 | `poisson_coprime` | Σ_{m∈ℤ, (m,c)=1} f(m/c) = Σ_{t∈ℤ} f̂(t)c_c(t) for Schwartz f |
 | `theoremB` | Theorem B |
 
-Not formalized: Theorem A, Lemmas 1–5 and 7, and Proposition 1. These need the Eichler–Selberg trace formula, class-number L-values and GRH, which are not in Mathlib.
+Not formalized (v10 numbering): Theorem A, Lemmas 1–5 and 8, and Proposition 1, which need the Eichler–Selberg trace formula, class-number L-values and GRH, none of which are in Mathlib; nor Lemma 7 (the second-moment bound), which is elementary and feeds only Theorem A, so it is checked numerically (below) rather than formalized.
 
 `LocalCounts.lean` is the earlier set of finite `native_decide` checks of the Lemma 6 point counts (ℓ ≤ 13). The general proofs in `LocalDensities.lean` supersede it. It is kept for the record and is not part of the default build or the audit. It imports all of Mathlib. To build it:
 
@@ -97,7 +99,7 @@ PARI/GP (through `cypari`) supplies traces, class numbers and L-values. The loca
 | Check (`proof/…`) | What it tests | Paper |
 |---|---|---|
 | `exact_checks.py` → `exact_checks.log` | Poisson closed form of the weight sum; extra terms and D_K; Zagier's local factors (796 pairs); H(\|Δ\|) = √\|Δ\|/π · L(1,Δ); per-prime identity at K = 2000 | Lemmas 2, 3, Prop. 1 |
-| `local.py` → `local.log` | local densities by brute force against the table and the Ramanujan side (ℓ ≤ 13) | Lemmas 6, 8 |
+| `local.py` → `local.log` | local densities by brute force against the table and the Ramanujan side (ℓ ≤ 13) | Lemmas 6, 9 |
 | `local_k.py 1`, `local_k.py 2` | the same for Δ = t² − 4bᵏ; k = 1 reproduces Bober–Booker–Lee–Lowry-Duda | Lemma 6 |
 | `f2.py 20000 24000` → `f2.log` | Euler product f₂(t) against prime averages of L(1, t² − 4p²), 406 primes | Lemma 6 |
 | `thmB.py` → `thmB.log` | t-series against point masses, c ≤ 60000; squares, primes, A₁ masses | Theorem B, §1.2 |
@@ -106,7 +108,12 @@ PARI/GP (through `cypari`) supplies traces, class numbers and L-values. The loca
 | `thmA_numeric.py` → `thmA_numeric.log` | end to end, K = 10⁴ … 10⁶: M(K) from class numbers vs A(K) vs the main term | §10 table |
 | `a_minus_pred.py` | the same average over all integers matches the main term to 1e-8 | §10 |
 | `review_arith/s1`–`s7` | independent recheck of Lemmas 6, 8 and Theorem B (own code) | §10 "recheck" |
-| `review_analysis/chk_*.py` | independent recheck of Lemmas 1–4, 6, 7, Prop. 1 and the error exponents (own code) | §10 "recheck" |
+| `review_analysis/chk_*.py` | independent recheck of Lemmas 1–4, 6, 7, Prop. 1 and the error exponents (own code; v9 numbering, where Lemma 7 is the averaged series) | §10 "recheck" |
+| `second_moment_check.py` → `second_moment_check.log` | Lemma 7 of v10 (second moment of a_{t²−4b²}(n) over units b): N_q, a_Δ(n), W(ℓʲ) and Σ_b a(b)² from the definitions, against the bound; n < 200 and 13 further n ≤ 1024, 0 ≤ t < 30; prime powers ℓ ≤ 13, ℓʲ ≤ 2500, 2ʲ ≤ 256 | Lemma 7 (v10) |
+| `second_moment_check_extra.py` → `second_moment_check_extra.log` | the audit's probes A–E: the sharper 2-adic bound 128(j−2)φ(2ʲ) and W(2)=1, W(4)=8 for 2‖t; observed W(ℓʲ)/φ(ℓʲ) against the proved bounds; multiplicativity of N_q with an even factor for all D mod 4q; where the maximum of Σ_b a(b)²/(φτ²) is attained | Lemma 7(a), Lemma 3(3) |
+| `review_second_moment/second_moment_recheck.py` → `…recheck.log` | independent recheck of Lemma 7 (own code): (a) for all n ≤ 400 and every class of t; prime powers to 2¹², 3⁷, 5⁵, 7⁴; (b) directly, via the character table of (ℤ/nℤ)ˣ, Plancherel and â(χ₀) = δ_t(n), for all n ≤ 160 | Lemma 7 (v10), §10 "recheck" |
+| `review_second_moment/jacobi_sharpness_check.py` → `…sharpness_check.log` | independent check of the Jacobi-sum formula (own code, characters from a primitive root): a(b) from the definition equals the Legendre symbol; Σ_b a(b)² = p−3; odd characters vanish; the formula at every even character to 1e−9; the lower bound; 23 primes 11 ≤ p ≤ 103, all 1 ≤ t < p | Remark after Lemma 7 (v10), §10 "recheck" |
+| `review_second_moment/jacobi_probe.py` → `jacobi_probe.log` | the Jacobi-sum formula for â(χ) at prime moduli (Remark after Lemma 7): all even characters, 23 primes 11 ≤ p ≤ 103 and all 1 ≤ t < p, plus six larger primes; odd characters vanish; Σ_b a(b)² = p − 3; the lower bound (p−3)/(2√p) | Remark after Lemma 7 (v10) |
 
 **`thmA_numeric.log` was regenerated on 24 October 2026.** The original log printed the limit as −1.707745.
 - That value came from an older default that summed the t-series only to |t| ≤ 600. The script now sums to |t| ≤ 3000 and prints −1.707779, the value used in the paper.
@@ -116,7 +123,7 @@ PARI/GP (through `cypari`) supplies traces, class numbers and L-values. The loca
 
 **The review scripts test the drafts they were given.** The reviews found errors that were then corrected in the paper, so a few of these scripts still print the discrepancies they found. For example, `chk_lemma3.py` (b) flags the r = 1 Hensel count, which the paper now states correctly. `chk_lemma2.py` also tests small θ on purpose, outside the range of the theorem. These scripts have no committed logs. The runner only requires that they run; their output in `build/logs/` is meant to be read.
 
-The two `review_*` folders also contain the version of the proof each independent review was given (`proof_doc.md`, `doc.md`, `companion.md`).
+The two `review_*` folders also contain the version of the proof each independent review was given (`proof_doc.md`, `doc.md`, `companion.md`). `review_second_moment/` likewise holds the note the second-moment lemma was audited from (`second_moment_lemma.md`), its audit (`second_moment_audit.md`, findings F1–F5), the review that passed v10 and found the sharpness of Lemma 7(b) (`v10_review_2026-11-03.md`), the final pass over rev 2/3 (`v10_rev2_overview_2026-11-03.md`), and the v10 changelog.
 
 `arith_s4` reads `f2_consts.npy`, which `arith_s3` writes, so run them in that order. `run_checks.py` already does.
 
@@ -135,6 +142,7 @@ lean/
 proof/                      numerical scripts and their logs
   review_analysis/          independent recheck: analytic lemmas
   review_arith/             independent recheck: arithmetic lemmas and Theorem B
+  review_second_moment/     v10: independent recheck of the second-moment lemma, Jacobi-sum check, review notes
 scripts/
   checks.tsv                list of numerical checks and their reference logs
   run_checks.py             runs them and compares with the logs
@@ -149,4 +157,4 @@ To cite this work, cite the paper ([doi:10.5281/zenodo.23632327](https://doi.org
 
 ## Use of AI tools
 
-As stated in the paper, this work was carried out by the author with an AI assistant (Claude, Anthropic). The assistant drafted the proofs and wrote the numerical code and the Lean formalization, under the author's direction. The author takes responsibility for the content.
+As stated in the paper, this work was carried out by the author with an AI assistant (Claude, Anthropic). The assistant drafted the proofs and wrote the numerical code and the Lean formalization, under the author's direction. Independent reviews by separate AI-agent sessions, whose notes and check scripts are in the `review_*` folders, led to corrections incorporated in the paper. The author takes responsibility for the content.

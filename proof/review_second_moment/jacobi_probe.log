@@ -1,0 +1,7 @@
+p=157 t=8: sum|a^| = 7.9938, formula sum = 7.9810, max |diff| = 1.1e-14, (2/pi)sqrt p = 7.9768
+p=151 t=11: sum|a^| = 7.7939, formula sum = 7.7939, max |diff| = 7.1e-15, (2/pi)sqrt p = 7.8229
+p=139 t=14: sum|a^| = 7.2741, formula sum = 7.2741, max |diff| = 9.8e-15, (2/pi)sqrt p = 7.5056
+p=131 t=27: sum|a^| = 6.9424, formula sum = 6.9424, max |diff| = 7.0e-15, (2/pi)sqrt p = 7.2864
+p=101 t=37: sum|a^| = 6.3710, formula sum = 6.3510, max |diff| = 6.2e-15, (2/pi)sqrt p = 6.3979
+p=97 t=23: sum|a^| = 6.0916, formula sum = 6.0708, max |diff| = 6.3e-15, (2/pi)sqrt p = 6.2700
+sweep 23 primes 11..103, all 1<=t<p: OK; max |formula - a^(chi)| = 1.2e-14; sum|a^|/sqrt(p) in [0.459, 0.635]

@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this code or the Lean formalization, please cite the paper and this repository."
 title: "prime-square-murmurations: code, logs and Lean formalization"
 type: software
-version: "1.0.0"
+version: "1.1.0"
 doi: "10.5281/zenodo.23631454"
-date-released: "2026-10-24"
+date-released: "2026-11-03"
 authors:
   - family-names: Gifford
     given-names: Matthew
@@ -25,4 +25,4 @@ preferred-citation:
     - family-names: Gifford
       given-names: Matthew
   year: 2026
-  month: 10
+  month: 11
